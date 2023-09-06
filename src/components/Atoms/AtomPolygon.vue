@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ShapePointCoord } from "../../types";
-import { PropType } from "vue";
+import { ShapePointCoord, PropType } from "../../types";
 defineProps({
   coords: { type: Object as PropType<ShapePointCoord[]>, required: true },
   backgroundColor: { type: String, default: "#ffffff" },

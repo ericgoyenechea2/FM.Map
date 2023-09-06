@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { PropType, ref } from "vue";
+import { ref, PropType } from "vue";
 import { Room } from "../../types";
 import AtomPolygon from "../Atoms/AtomPolygon.vue";
 defineProps({
