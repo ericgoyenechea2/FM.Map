@@ -11,6 +11,8 @@ export type Room = {
 };
 
 export type Floor = {
+  id: number;
+  number?: string;
   silueteMapCoord: ShapePointCoord[];
   rooms: Room[];
 };
