@@ -12,10 +12,10 @@ import OrganismMap from "../components/Organisms/OrganismMap.vue";
 #container-map {
   width: 100vw;
   height: 100vh;
-  background-color: blue;
   flex-flow: row;
   margin: auto;
   position: relative;
   display: flex;
+  background-color: #f4f8fa;
 }
 </style>

@@ -4,6 +4,7 @@ import { PropType } from "vue";
 defineProps({
   coords: { type: Object as PropType<ShapePointCoord[]>, required: true },
   backgroundColor: { type: String, default: "#ffffff" },
+  backgroundColorHover: { type: String, default: "#a6d0e1" },
   lineColor: { type: String, default: "black" },
 });
 function createShape(shape: ShapePointCoord[]): string {
@@ -16,14 +17,12 @@ function createShape(shape: ShapePointCoord[]): string {
 </script>
 
 <template>
-  <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="polygon-svg">
-    <polygon
-      :points="createShape(coords)"
-      class="polygon"
-      @mouseover="$emit('overPoligon')"
-      @mouseout="$emit('outPoligon')"
-    ></polygon>
-  </svg>
+  <polygon
+    :points="createShape(coords)"
+    class="polygon"
+    @mouseover="$emit('overPoligon')"
+    @mouseout="$emit('outPoligon')"
+  ></polygon>
 </template>
 
 <style scoped lang="scss">
@@ -37,12 +36,10 @@ function createShape(shape: ShapePointCoord[]): string {
   top: 0;
   left: 0;
   scale: 1.1;
-}
-.polygon-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  &:hover {
+    fill: v-bind("`${backgroundColorHover}`");
+  }
 }
 </style>
