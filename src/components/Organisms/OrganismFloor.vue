@@ -17,6 +17,13 @@ defineProps({
     <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="polygon-svg">
       <MoleculeRoom v-for="room in floor.rooms" :room="room" />
     </svg>
+    <p
+      class="text"
+      v-for="room in floor.rooms"
+      :style="`top:${room.nameCoords.y}%; left:${room.nameCoords.x}%;`"
+    >
+      {{ room.name }}
+    </p>
   </section>
 </template>
 <style lang="scss" scoped>
@@ -31,5 +38,14 @@ defineProps({
   height: 100%;
   top: 0;
   left: 0;
+}
+.text {
+  position: absolute;
+
+  top: 20%;
+
+  left: 30%;
+
+  pointer-events: none;
 }
 </style>
