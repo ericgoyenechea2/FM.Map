@@ -2,6 +2,7 @@
 import { ShapePointCoord } from "../../types";
 import { PropType } from "vue";
 defineProps({
+  active: { type: Boolean, required: false },
   coords: { type: Object as PropType<ShapePointCoord[]>, required: true },
   backgroundColor: { type: String, default: "#ffffff" },
   backgroundColorHover: { type: String, default: "#a6d0e1" },
@@ -20,6 +21,7 @@ function createShape(shape: ShapePointCoord[]): string {
   <polygon
     :points="createShape(coords)"
     class="polygon"
+    :class="{ active: active }"
     @mouseover="$emit('overPoligon')"
     @mouseout="$emit('outPoligon')"
   ></polygon>
@@ -39,6 +41,9 @@ function createShape(shape: ShapePointCoord[]): string {
   cursor: pointer;
   transition-duration: 0.5s;
   &:hover {
+    fill: v-bind("`${backgroundColorHover}`");
+  }
+  .active {
     fill: v-bind("`${backgroundColorHover}`");
   }
 }

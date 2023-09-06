@@ -4,12 +4,12 @@ import { useMap } from "../../core/composables/useMap";
 defineProps({
   floorNumber: { type: Number, required: true },
 });
-const { changeFloor, getIndexRoomSelected } = useMap();
+const { changeFloor, getIndexFloorSelected } = useMap();
 </script>
 <template>
   <section>
     <button
-      :class="{ active: index - 1 == getIndexRoomSelected }"
+      :class="{ active: index - 1 == getIndexFloorSelected }"
       @click="changeFloor(index - 1)"
       v-for="index in floorNumber"
     >

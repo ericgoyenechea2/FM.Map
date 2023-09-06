@@ -1,15 +1,14 @@
 <script lang="ts" setup>
 import OrganismFloor from "../Organisms/OrganismFloor.vue";
-import { ref } from "vue";
 import { useMap } from "../../core/composables/useMap";
 import MoleculeFloorsButton from "../Molecules/MoleculeFloorsButton.vue";
-const { getFloors, getIndexRoomSelected } = useMap();
+const { getFloors, getIndexFloorSelected } = useMap();
 </script>
 <template>
   <section>
     <div v-for="(floor, index) in getFloors">
       <Transition name="slide-fade">
-        <OrganismFloor v-if="index == getIndexRoomSelected" :floor="floor" />
+        <OrganismFloor v-if="index == getIndexFloorSelected" :floor="floor" />
       </Transition>
     </div>
     <MoleculeFloorsButton

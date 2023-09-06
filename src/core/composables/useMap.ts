@@ -1,6 +1,5 @@
-import { ref, computed } from "vue";
-import { Floor } from "../../types";
-const $_floors: Floor[] = [
+import { ref, computed, reactive } from "vue";
+const $_floors = reactive([
   {
     id: 1,
     silueteMapCoord: [
@@ -47,7 +46,7 @@ const $_floors: Floor[] = [
     rooms: [
       {
         id: 1,
-
+        active: false,
         coords: [
           { x: 11.1, y: 60 },
 
@@ -77,7 +76,7 @@ const $_floors: Floor[] = [
 
       {
         id: 2,
-
+        active: false,
         coords: [
           { x: 58.7, y: 10.7 },
 
@@ -105,7 +104,7 @@ const $_floors: Floor[] = [
 
       {
         id: 3,
-
+        active: false,
         coords: [
           { x: 35.2, y: 60.8 },
 
@@ -131,7 +130,7 @@ const $_floors: Floor[] = [
 
       {
         id: 4,
-
+        active: false,
         coords: [
           { x: 57.7, y: 77.5 },
 
@@ -153,7 +152,7 @@ const $_floors: Floor[] = [
 
       {
         id: 5,
-
+        active: false,
         coords: [
           { x: 65.2, y: 41.9 },
 
@@ -185,7 +184,7 @@ const $_floors: Floor[] = [
 
       {
         id: 6,
-
+        active: false,
         coords: [
           { x: 56.5, y: 48.3 },
 
@@ -211,7 +210,7 @@ const $_floors: Floor[] = [
 
       {
         id: 7,
-
+        active: false,
         coords: [
           { x: 12.7, y: 31.2 },
 
@@ -235,7 +234,7 @@ const $_floors: Floor[] = [
 
       {
         id: 8,
-
+        active: false,
         coords: [
           { x: 15, y: 40.5 },
 
@@ -257,7 +256,7 @@ const $_floors: Floor[] = [
 
       {
         id: 9,
-
+        active: false,
         coords: [
           { x: 58.4, y: 24.4 },
 
@@ -283,7 +282,7 @@ const $_floors: Floor[] = [
 
       {
         id: 10,
-
+        active: false,
         coords: [
           { x: 46, y: 18.4 },
 
@@ -307,7 +306,7 @@ const $_floors: Floor[] = [
 
       {
         id: 11,
-
+        active: false,
         coords: [
           { x: 31.9, y: 36.4 },
 
@@ -329,7 +328,7 @@ const $_floors: Floor[] = [
 
       {
         id: 12,
-
+        active: false,
         coords: [
           { x: 38.6, y: 36.4 },
 
@@ -396,7 +395,7 @@ const $_floors: Floor[] = [
     rooms: [
       {
         id: 0,
-
+        active: false,
         coords: [
           { x: 59.7, y: 69.2 },
 
@@ -420,7 +419,7 @@ const $_floors: Floor[] = [
 
       {
         id: 1,
-
+        active: false,
         coords: [
           { x: 16.6, y: 68.8 },
 
@@ -444,7 +443,7 @@ const $_floors: Floor[] = [
 
       {
         id: 2,
-
+        active: false,
         coords: [
           { x: 16.9, y: 74.7 },
 
@@ -466,7 +465,7 @@ const $_floors: Floor[] = [
 
       {
         id: 3,
-
+        active: false,
         coords: [
           { x: 64.2, y: 28.2 },
 
@@ -490,7 +489,7 @@ const $_floors: Floor[] = [
 
       {
         id: 4,
-
+        active: false,
         coords: [
           { x: 58.9, y: 10.8 },
 
@@ -512,7 +511,7 @@ const $_floors: Floor[] = [
 
       {
         id: 5,
-
+        active: false,
         coords: [
           { x: 41.5, y: 61 },
 
@@ -534,7 +533,7 @@ const $_floors: Floor[] = [
 
       {
         id: 6,
-
+        active: false,
         coords: [
           { x: 49.8, y: 61 },
 
@@ -556,7 +555,7 @@ const $_floors: Floor[] = [
 
       {
         id: 7,
-
+        active: false,
         coords: [
           { x: 65.4, y: 41.8 },
 
@@ -582,7 +581,7 @@ const $_floors: Floor[] = [
 
       {
         id: 8,
-
+        active: false,
         coords: [
           { x: 12.9, y: 40 },
 
@@ -606,7 +605,7 @@ const $_floors: Floor[] = [
 
       {
         id: 9,
-
+        active: false,
         coords: [
           { x: 50.1, y: 57.8 },
 
@@ -628,7 +627,7 @@ const $_floors: Floor[] = [
 
       {
         id: 10,
-
+        active: false,
         coords: [
           { x: 53.6, y: 57.8 },
 
@@ -650,7 +649,7 @@ const $_floors: Floor[] = [
 
       {
         id: 11,
-
+        active: false,
         coords: [
           { x: 45.6, y: 57.8 },
 
@@ -672,7 +671,7 @@ const $_floors: Floor[] = [
 
       {
         id: 12,
-
+        active: false,
         coords: [
           { x: 57.7, y: 57.8 },
 
@@ -694,7 +693,7 @@ const $_floors: Floor[] = [
 
       {
         id: 13,
-
+        active: false,
         coords: [
           { x: 41.3, y: 57.8 },
 
@@ -716,7 +715,7 @@ const $_floors: Floor[] = [
 
       {
         id: 14,
-
+        active: false,
         coords: [
           { x: 59.7, y: 57.5 },
 
@@ -738,7 +737,7 @@ const $_floors: Floor[] = [
 
       {
         id: 15,
-
+        active: false,
         coords: [
           { x: 15.1, y: 40.2 },
 
@@ -760,7 +759,7 @@ const $_floors: Floor[] = [
 
       {
         id: 16,
-
+        active: false,
         coords: [
           { x: 26, y: 55.6 },
 
@@ -786,7 +785,7 @@ const $_floors: Floor[] = [
 
       {
         id: 17,
-
+        active: false,
         coords: [
           { x: 58.6, y: 18.5 },
 
@@ -812,7 +811,7 @@ const $_floors: Floor[] = [
 
       {
         id: 18,
-
+        active: false,
         coords: [
           { x: 57.8, y: 32.3 },
 
@@ -838,7 +837,7 @@ const $_floors: Floor[] = [
 
       {
         id: 19,
-
+        active: false,
         coords: [
           { x: 46.3, y: 31.5 },
 
@@ -861,18 +860,24 @@ const $_floors: Floor[] = [
       },
     ],
   },
-];
-const $_indexRoomSelected = ref<number>(0);
+]);
+const $_indexFloorSelected = ref<number>(0);
 export const useMap = function () {
   function changeFloor(id: number) {
-    $_indexRoomSelected.value = id;
+    $_indexFloorSelected.value = id;
+  }
+  function activeRoom(id: number) {
+    $_floors[$_indexFloorSelected.value].rooms[id].active =
+      !$_floors[$_indexFloorSelected.value].rooms[id].active;
+    console.log($_floors[$_indexFloorSelected.value].rooms[id].active);
   }
 
   const getFloors = computed(() => $_floors);
-  const getIndexRoomSelected = computed(() => $_indexRoomSelected.value);
+  const getIndexFloorSelected = computed(() => $_indexFloorSelected.value);
   return {
     changeFloor,
     getFloors,
-    getIndexRoomSelected,
+    getIndexFloorSelected,
+    activeRoom,
   };
 };

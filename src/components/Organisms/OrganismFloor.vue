@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import MoleculeSilueteMap from "../Molecules/MoleculeSilueteMap.vue";
 import MoleculeRoom from "../Molecules/MoleculeRoom.vue";
-import { Room, ShapePointCoord, Floor } from "../../types";
+import { Floor } from "../../types";
 import { PropType } from "vue";
 defineProps({
   floor: { type: Object as PropType<Floor>, required: true },

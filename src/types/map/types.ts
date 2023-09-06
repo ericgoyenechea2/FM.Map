@@ -6,6 +6,7 @@ export type ShapePointCoord = {
 export type Room = {
   id: number;
   name: string;
+  active: boolean;
   nameCoords: ShapePointCoord;
   coords: ShapePointCoord[];
   backgroundColor: string;
