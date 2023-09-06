@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import OrganismMap from "../components/Organisms/OrganismMap.vue";
+import ContainerMap from "../components/Container/ContainerMap.vue";
 </script>
 
 <template>
   <div id="container-map">
-    <OrganismMap />
+    <ContainerMap />
   </div>
 </template>
 
