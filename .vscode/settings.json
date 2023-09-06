@@ -1,0 +1,20 @@
+{
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": false,
+    "source.sortMembers": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#105042",
+    "titleBar.inactiveBackground": "#105042",
+    "titleBar.activeForeground": "#FFF",
+    "titleBar.inactiveForeground": "#FFF",
+    "statusBar.background": "#105042",
+    "statusBarItem.activeBackground": "#FFF",
+    "statusBar.foreground": "#FFF"
+  }
+}
