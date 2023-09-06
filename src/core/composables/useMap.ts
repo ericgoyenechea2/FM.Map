@@ -45,7 +45,7 @@ const $_floors = reactive([
     ],
     rooms: [
       {
-        id: 1,
+        id: 0,
         active: false,
         coords: [
           { x: 11.1, y: 60 },
@@ -75,7 +75,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 2,
+        id: 1,
         active: false,
         coords: [
           { x: 58.7, y: 10.7 },
@@ -103,7 +103,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 3,
+        id: 2,
         active: false,
         coords: [
           { x: 35.2, y: 60.8 },
@@ -129,7 +129,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 4,
+        id: 3,
         active: false,
         coords: [
           { x: 57.7, y: 77.5 },
@@ -151,7 +151,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 5,
+        id: 4,
         active: false,
         coords: [
           { x: 65.2, y: 41.9 },
@@ -183,7 +183,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 6,
+        id: 5,
         active: false,
         coords: [
           { x: 56.5, y: 48.3 },
@@ -209,7 +209,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 7,
+        id: 6,
         active: false,
         coords: [
           { x: 12.7, y: 31.2 },
@@ -233,7 +233,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 8,
+        id: 7,
         active: false,
         coords: [
           { x: 15, y: 40.5 },
@@ -255,7 +255,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 9,
+        id: 8,
         active: false,
         coords: [
           { x: 58.4, y: 24.4 },
@@ -281,7 +281,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 10,
+        id: 9,
         active: false,
         coords: [
           { x: 46, y: 18.4 },
@@ -305,7 +305,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 11,
+        id: 10,
         active: false,
         coords: [
           { x: 31.9, y: 36.4 },
@@ -327,7 +327,7 @@ const $_floors = reactive([
       },
 
       {
-        id: 12,
+        id: 11,
         active: false,
         coords: [
           { x: 38.6, y: 36.4 },
@@ -867,9 +867,10 @@ export const useMap = function () {
     $_indexFloorSelected.value = id;
   }
   function activeRoom(id: number) {
+    console.log(id);
+    console.log($_floors[$_indexFloorSelected.value].rooms[id]);
     $_floors[$_indexFloorSelected.value].rooms[id].active =
       !$_floors[$_indexFloorSelected.value].rooms[id].active;
-    console.log($_floors[$_indexFloorSelected.value].rooms[id].active);
   }
 
   const getFloors = computed(() => $_floors);

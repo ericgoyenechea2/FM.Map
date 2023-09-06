@@ -43,8 +43,8 @@ function createShape(shape: ShapePointCoord[]): string {
   &:hover {
     fill: v-bind("`${backgroundColorHover}`");
   }
-  .active {
-    fill: v-bind("`${backgroundColorHover}`");
-  }
+}
+.active {
+  fill: v-bind("`${backgroundColorHover}`");
 }
 </style>
